@@ -10,7 +10,7 @@ pip install flask-tui-editor
 ```
 ### Usage
 
-Check [example](example/) project and documentation.
+Check [example](example/) project and [documentation](https://flask-tui-editor.readthedocs.io/en/latest/).
 
 ## Licenses
 
