@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Toast UI Editor Integration</title>
+    {{ flask_tui_editor.css }}
+</head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.content.label }}
+            {{ form.content(editor_options='{"theme":"dark", "language":"tr"}') }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+
+    {{ flask_tui_editor.js }}
+</body>
+</html>
