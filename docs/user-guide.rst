@@ -41,6 +41,14 @@ For instance, the following code sets the editor's language to Turkish and the t
 
     {{ form.editor_field(editor_options='{"theme":"dark", "language":"tr"}') }}
 
+or
+
+.. code-block:: python
+
+    CONTENT_FIELD_EDITOR_CONFIG = {'theme':'dark', 'language':'tr'}
+    content = TUIEditorField('Content', render_kw={'editor_options': json.dumps(CONTENT_FIELD_EDITOR_CONFIG)})
+
+
 Refer to the `Toast UI Editor documentation <https://nhn.github.io/tui.editor/latest/>`_ for a comprehensive list of configuration options available for the `editor_options` parameter, plugins and localizations.
 
 
@@ -142,7 +150,7 @@ Example project is accessible at `example` directory in project folder.
 
 
     class ContentDemoForm(FlaskForm):
-        content = TUIEditorField('Content', editor_options='{"theme":"dark", "language":"tr"}')
+        content = TUIEditorField('Content')
         submit = SubmitField('Submit')
 
 
